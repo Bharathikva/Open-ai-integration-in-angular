@@ -1,0 +1,32 @@
+
+<div class="row m-md-5 m-3 ">
+    <div class="col-lg-12 bg-blue py-5 px-5 text-white text-center">
+        <h2>Your Appointments</h2>
+
+        <div *ngIf="myData.length" >
+            <table class="col-12 bg-red p-5 my-4 fw-bold">
+              <thead>
+                <tr>
+                   <th>Name</th> 
+                   <th>Phone</th> 
+                   <th>Email</th> 
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white text-dark fw-bold">
+                <tr *ngFor="let appointment of myData">
+                  <td>{{ appointment.name }}</td>
+                  <td>{{ appointment.phone }}</td>
+                  <td>{{ appointment.email }}</td>
+                  <td>{{ appointment.date }}</td>
+                  <td>{{ appointment.time }}</td>
+                  <td>{{ appointment.reason }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+
+</div>
